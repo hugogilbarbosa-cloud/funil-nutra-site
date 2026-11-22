@@ -1,0 +1,106 @@
+{
+  "_sobre": "Modelo de oferta do Funil Nutra, layout ADVERTORIAL (matéria estilo portal/descoberta). Copie para <novo-slug>.json e preencha. Campos que começam com _ são só explicação, o motor (app.js) ignora.",
+
+  "tipo_pagina": "advertorial",
+
+  "slug": "modelo-advertorial",
+  "titulo_pagina": "Modelo Advertorial · Kortexx",
+
+  "pixel_id": "000000000000000",
+  "google_tag_id": "",
+
+  "link_afiliado": "https://s.shopee.com.br/COLE_O_LINK_DO_BOTAO_KORTEXX",
+  "_link_afiliado": "Aqui (raiz do JSON), não dentro de tela_diagnostico — advertorial e vendas não têm tela de diagnóstico própria. O sub_id (sub_id1/2/3) é anexado automaticamente a partir da UTM da campanha, igual no layout quiz.",
+
+  "portal": {
+    "_sobre": "Cabeçalho estilo portal/revista de bem-estar. Campo opcional — sem ele, o motor usa 'Portal Vida & Rotina' como padrão.",
+    "nome": "Portal Vida & Rotina",
+    "iniciais": "VR",
+    "tempo_leitura": "3 min"
+  },
+
+  "advertorial": {
+    "gancho_topo": "Frase curta de gancho/curiosidade (opcional) — aparece numa barra de destaque acima do cabeçalho do portal. NUNCA presuma uma condição pessoal de quem lê (nada de \"Você tem X?\" — Personal Attribute policy da Meta); prefira algo descritivo em 3ª pessoa, no tom da manchete.",
+
+    "categoria": "Bem-estar",
+    "manchete": "Descoberta chama atenção de quem busca mais disposição no dia a dia",
+    "autor": "Redação",
+    "data": "2026",
+    "imagem_destaque": "ofertas/assets/modelo-advertorial.jpg",
+    "imagem_destaque_alt": "Descrição curta da imagem pra acessibilidade",
+    "imagem_destaque_legenda": "Legenda fotojornalística curta, opcional — aparece embaixo da imagem.",
+    "_imagem_destaque": "Foto TEMÁTICA de estoque (uso editorial, sem citar o produto) — nunca use foto que mostre marca/embalagem de OUTRO produto, nem que pareça ser a foto oficial se não for.",
+
+    "imagem_produto": "ofertas/assets/modelo-advertorial.jpg",
+    "_imagem_produto": "Opcional — foto REAL do produto (baixada com scripts/funil-nutra/baixar-foto-produto.mjs ou, se a loja bloquear como a Shopee costuma bloquear, com scripts/funil-nutra/capturar-shopee.mjs via navegador). Aparece só em 2 lugares: dentro do card_oferta e na sticky bar do rodapé — nunca solta no meio da matéria (fica repetitivo). Sem este campo, nenhum dos dois mostra foto de produto e a sticky bar nem aparece.",
+
+    "blocos": [
+      { "tipo": "paragrafo", "texto": "Bloco 1 — Gancho de Identificação: a frustração do dia a dia relacionada ao produto, em tom editorial (reportagem), nunca como anúncio direto." },
+      { "tipo": "subtitulo", "texto": "Bloco 2 (subtítulo): por que a solução externa/comum costuma parar na superfície" },
+      { "tipo": "paragrafo", "texto": "Texto do bloco 2." },
+      { "tipo": "citacao", "texto": "Frase curta de destaque/transição (opcional) — vira uma caixa de citação, não repete o que já foi dito." },
+      { "tipo": "subtitulo", "texto": "Bloco 3 (subtítulo): o mecanismo, em termos de rotina/bem-estar — nunca cura, tratamento ou efeito terapêutico (ANVISA + política de saúde da Meta/Google)" },
+      { "tipo": "paragrafo", "texto": "Texto do bloco 3." },
+      { "tipo": "subtitulo", "texto": "Bloco 4 (subtítulo): como funciona na prática (modo de uso real, sem inventar)" },
+      { "tipo": "paragrafo", "texto": "Texto do bloco 4." },
+      { "tipo": "subtitulo", "texto": "Bloco 5 (subtítulo): alerta sobre falsificações/vendedor não autorizado e onde garantir o lote oficial" },
+      { "tipo": "paragrafo", "texto": "Texto do bloco 5 — fecha a narrativa e prepara a ponte pro card de oferta abaixo." }
+    ],
+    "_blocos": "Narrativa de 5 seções (gancho de identificação → por que a solução comum para na superfície → mecanismo → como funciona na prática → alerta de falsificação/lote oficial), ~500-700 palavras no total, com 1-2 blocos 'citacao' intercalados pra servir de respiro/destaque editorial e deixar a leitura leve no celular. Tipos aceitos: paragrafo, subtitulo, citacao, imagem (use { \"tipo\": \"imagem\", \"src\": \"ofertas/assets/...\", \"alt\": \"\" }).",
+
+    "infografico": {
+      "_sobre": "Opcional — SVG nativo gerado pelo motor (zero imagem externa, zero copyright) comparando 2 abordagens + tabela ❌/✅. Omita o campo inteiro se não fizer sentido pro nicho.",
+      "coluna_a": { "titulo": "Abordagem Superficial (ex.: Cremes/Shampoos)", "texto": "Frase curta descrevendo a abordagem fraca/comum." },
+      "coluna_b": { "titulo": "Nutrição de Dentro pra Fora (ex.: 2 Cápsulas/Dia)", "texto": "Frase curta descrevendo a abordagem do produto, em termos de rotina." },
+      "tabela": [
+        { "criterio": "Critério comparado em texto curto", "a": false, "b": true },
+        { "criterio": "Outro critério", "a": false, "b": true }
+      ],
+      "_tabela": "SEMPRE ❌ (a:false) na coluna A e ✅ (b:true) na coluna B, em toda linha — nunca o contrário. Escreva o critério de um jeito que isso seja verdade (ex.: 'Praticidade: 1x ao dia' em vez de 'Precisa reaplicar toda hora', que inverteria a lógica)."
+    },
+
+    "linha_tempo": [
+      { "badge": "MÊS 1", "titulo": "Construindo o hábito", "texto": "O que muda no 1º mês é a rotina virar automática — não um resultado físico prometido." },
+      { "badge": "MÊS 2", "titulo": "Mantendo a consistência", "texto": "O 2º pote garante que a rotina não pare no meio do caminho, que é quando a maioria desiste." },
+      { "badge": "MÊS 3", "titulo": "Rotina consolidada", "texto": "Depois de 90 dias, o hábito já faz parte do dia a dia — sem precisar mais pensar nisso." }
+    ],
+    "_linha_tempo": "Opcional — 3 cards (MÊS 1/2/3). É sobre o HÁBITO amadurecer (construir → manter → consolidar), nunca sobre o corpo/cabelo melhorando a cada mês — isso seria resultado físico quantificado/prometido num prazo, proibido pela política de saúde da Meta/Google e pela regra 4 do CLAUDE.md da raiz. Serve também pra justificar vender kit com mais de 1 pote (dura mais meses de rotina), sem prometer o que o produto vai 'fazer' no corpo.",
+
+    "caixa_destaque": {
+      "titulo": "Resumo rápido",
+      "texto": "3 benefícios genéricos de bem-estar/rotina em 1 parágrafo curto, pra quem só escaneou a matéria."
+    },
+
+    "comentarios": [],
+    "_comentarios": "VAZIO DE PROPÓSITO. Só entra aqui avaliação REAL copiada da própria loja (Shopee/ML) — nunca invente nome, nota ou texto (regra 4 do CLAUDE.md da raiz, proibido depoimento inventado). Formato: [{ \"nome\", \"iniciais\", \"nota\" (1-5), \"texto\", \"verificado\": true }]. Sem dado real, deixe a lista vazia — o motor simplesmente não mostra a seção.",
+
+    "card_oferta": {
+      "_sobre": "Opcional — card final de alto contraste com CTA em gradiente + pulse sutil. Sem este campo, o motor cai no 'cta' simples abaixo. A foto do produto dentro do card vem automaticamente de 'imagem_produto' lá em cima — não precisa repetir aqui. Com imagem_produto + card_oferta presentes, a sticky bar do rodapé também aparece sozinha (não precisa configurar à parte).",
+      "selo": "Lote Oficial Verificado na Shopee • Nota X.X",
+      "nota": 5,
+      "nota_fonte": "Shopee Oficial",
+      "_nota": "Número real da nota da loja (ex.: 5, 4.8) — usado pras estrelas da sticky bar. nota_fonte é o texto entre parênteses ao lado (ex.: 'Shopee Oficial').",
+      "beneficios": ["Mesmos 3 benefícios da caixa_destaque, ou uma variação curta"],
+      "disponibilidade_texto": "Frase com dado real e verificável (ex.: nota e nº de avaliações da loja) — nunca urgência/escassez inventada.",
+      "texto_botao": "Ver na loja oficial",
+      "micro_texto_seguranca": "Compra 100% segura, direto na loja oficial."
+    },
+
+    "cta": {
+      "texto_antes": "Quer saber mais sobre onde encontrar esse produto?",
+      "texto_botao": "Ver na loja oficial"
+    }
+  },
+
+  "aviso_legal": "Este conteúdo tem fins informativos sobre bem-estar e não substitui orientação médica ou nutricional profissional. Resultados individuais podem variar. #publi — este site pode conter link de afiliado; podemos receber uma comissão por compras feitas através dele, sem custo extra para você. Consulte um profissional de saúde antes de iniciar o uso de qualquer suplemento.",
+
+  "back_redirects": [
+    { "titulo": "Espera! Separamos um desconto extra pra você", "texto": "Antes de sair, veja esta oferta com um preço ainda melhor.", "texto_botao": "Ver desconto", "href": "/q/outra-oferta-ancora", "auto": false }
+  ],
+
+  "safe_page": {
+    "ativo": true,
+    "titulo": "Bem-estar no dia a dia: pequenos hábitos que ajudam",
+    "conteudo": "Manter uma rotina de sono regular, se hidratar bem e reservar alguns minutos do dia para descansar são hábitos simples que ajudam no bem-estar geral."
+  }
+}

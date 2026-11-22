@@ -1,0 +1,45 @@
+{
+  "_sobre": "Exemplo de referência (layout quiz) citado em docs/PLAYBOOK-NUTRA-QUIZ.md — não é uma oferta real no ar (link_afiliado e pixel_id ficam vazios de propósito). Para criar uma oferta de verdade, copie modelo-nutra.json (ou modelo-advertorial.json / modelo-vendas.json) com um slug novo. _exemplo:true tira este arquivo da lista de ofertas do painel.",
+  "_exemplo": true,
+
+  "slug": "artro-pure",
+  "titulo_pagina": "Artro Pure · Oferta",
+
+  "pixel_id": "",
+  "google_tag_id": "",
+
+  "headline_inicial": "Descubra em 30 segundos o que pode estar limitando sua mobilidade",
+  "subheadline": "Responda 4 perguntas rápidas e veja a recomendação.",
+  "imagem_produto": "ofertas/assets/artro-pure.jpg",
+
+  "perguntas": [
+    { "id": "p1", "texto": "Com que frequência você sente dor ou desconforto nas articulações (joelho, ombro, mãos)?", "opcoes": ["Quase todo dia", "Algumas vezes por semana", "Só depois de esforço físico", "Raramente"] },
+    { "id": "p2", "texto": "Isso afeta sua mobilidade no dia a dia (subir escadas, caminhar, se exercitar)?", "opcoes": ["Sim, bastante", "Um pouco", "Só em alguns movimentos", "Não afeta"] },
+    { "id": "p3", "texto": "Você já tentou algo pra apoiar a saúde das suas articulações?", "opcoes": ["Já tentei, sem resultado", "Já tentei e ajudou um pouco", "Nunca tentei", "Estou pesquisando agora"] },
+    { "id": "p4", "texto": "O que mais te motivaria a cuidar disso agora?", "opcoes": ["Voltar a me exercitar sem desconforto", "Ter mais liberdade de movimento no dia a dia", "Me sentir mais disposto(a)", "Experimentar algo novo com segurança"] }
+  ],
+
+  "tela_diagnostico": {
+    "titulo": "Com base nas suas respostas, isso pode apoiar sua mobilidade:",
+    "beneficios": [
+      "Formulado pra apoiar a saúde das articulações no dia a dia",
+      "Prático de usar, sem complicação",
+      "Vendido em loja oficial verificada na Shopee"
+    ],
+    "texto_escassez": "Oferta com desconto válida só por hoje — estoque limitado.",
+    "texto_botao": "Quero aproveitar a oferta",
+    "link_afiliado": "COLE_SEU_LINK_SHOPEE_AQUI"
+  },
+
+  "aviso_legal": "Este conteúdo tem fins informativos sobre bem-estar e não substitui orientação médica ou nutricional profissional. Resultados individuais podem variar. #publi — este site pode conter link de afiliado; podemos receber uma comissão por compras feitas através dele, sem custo extra para você. Consulte um profissional de saúde antes de iniciar o uso de qualquer suplemento.",
+
+  "back_redirects": [
+    { "titulo": "Antes de sair, entre no nosso canal VIP", "texto": "Ofertas novas todos os dias direto no seu Telegram, sem compromisso.", "texto_botao": "Entrar no canal", "href": "COLE_O_LINK_DO_SEU_CANAL_VIP_AQUI", "auto": false }
+  ],
+
+  "safe_page": {
+    "ativo": true,
+    "titulo": "Mobilidade no dia a dia: pequenos hábitos que ajudam",
+    "conteudo": "Alongar antes e depois de atividades físicas, manter uma postura equilibrada ao longo do dia e fazer pausas em movimentos repetitivos são hábitos simples que ajudam a cuidar da mobilidade com o tempo. Pequenas mudanças de rotina, mantidas com consistência, costumam fazer mais diferença do que grandes mudanças pontuais."
+  }
+}

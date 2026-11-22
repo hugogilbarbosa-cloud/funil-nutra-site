@@ -1,0 +1,56 @@
+{
+  "_sobre": "Modelo de oferta do Funil Nutra, layout QUIZ (perguntas + diagnóstico). Copie este arquivo para <novo-slug>.json (mesma pasta) e preencha. O nome do arquivo = o slug (usado em /q/<slug> ou ?oferta=<slug>). Campos que começam com _ são só explicação, o motor (app.js) ignora. Para os outros 2 layouts, veja modelo-advertorial.json e modelo-vendas.json.",
+
+  "tipo_pagina": "quiz",
+  "_tipo_pagina": "quiz (este arquivo) | advertorial (matéria de portal) | vendas (página de vendas Direct Response). Se o campo faltar, o motor assume \"quiz\" — por isso ofertas antigas sem este campo continuam funcionando sem alteração.",
+
+  "slug": "modelo-nutra",
+  "titulo_pagina": "Modelo Nutra · Kortexx",
+
+  "pixel_id": "000000000000000",
+  "_pixel_id": "ID do Meta Pixel desta oferta (um por conta de anúncio/campanha). Dispara PageView ao abrir e Lead ao clicar no CTA final.",
+  "google_tag_id": "",
+  "_google_tag_id": "Opcional. ID do Google Ads/GA4 (ex.: AW-000000000). Deixe em branco se não usar Google Ads nesta oferta.",
+
+  "headline_inicial": "Descubra em 30 segundos o que pode estar pesando na sua rotina",
+  "subheadline": "Responda 4 perguntas rápidas e veja a recomendação.",
+  "imagem_produto": "ofertas/assets/modelo-nutra.jpg",
+  "_imagem_produto": "Coloque a foto do produto em funil-nutra/ofertas/assets/ e aponte o caminho aqui.",
+
+  "perguntas": [
+    { "id": "p1", "texto": "Com que frequência você sente falta de energia durante o dia?", "opcoes": ["Quase todo dia", "Algumas vezes por semana", "Raramente", "Nunca"] },
+    { "id": "p2", "texto": "Como está sua rotina de sono?", "opcoes": ["Durmo mal, acordo cansado(a)", "Durmo, mas podia ser melhor", "Durmo bem na maioria dos dias", "Durmo muito bem"] },
+    { "id": "p3", "texto": "Você já tentou algum produto para te ajudar nesse ponto?", "opcoes": ["Já, mas não funcionou", "Já, e ajudou um pouco", "Nunca tentei", "Estou tentando agora"] },
+    { "id": "p4", "texto": "O que mais te motivaria a melhorar isso agora?", "opcoes": ["Ter mais disposição no dia a dia", "Melhorar minha rotina de sono", "Me sentir melhor comigo mesmo(a)", "Experimentar algo novo com segurança"] }
+  ],
+  "_perguntas": "Sempre 4. Sem diagnóstico médico nem promessa de cura — são perguntas de rotina/hábito, só para qualificar e engajar antes da tela de oferta.",
+
+  "tela_diagnostico": {
+    "titulo": "Com base nas suas respostas, isso pode te ajudar:",
+    "beneficios": [
+      "Feito para apoiar sua rotina de bem-estar no dia a dia",
+      "Prático de usar, sem complicação",
+      "Um dos mais procurados da categoria"
+    ],
+    "texto_escassez": "Oferta com desconto válida só por hoje — estoque limitado.",
+    "texto_botao": "Quero aproveitar a oferta",
+    "link_afiliado": "https://s.shopee.com.br/COLE_O_LINK_DO_BOTAO_KORTEXX"
+  },
+  "_tela_diagnostico": "beneficios: só benefício genérico de bem-estar/rotina, nunca promessa de cura, tratamento ou efeito terapêutico (ANVISA + política de saúde da Meta/Google). link_afiliado: cole o link gerado pelo botão Kortexx na página do produto (Shopee/ML).",
+
+  "aviso_legal": "Este conteúdo tem fins informativos sobre bem-estar e não substitui orientação médica ou nutricional profissional. Resultados individuais podem variar. #publi — este site pode conter link de afiliado; podemos receber uma comissão por compras feitas através dele, sem custo extra para você. Consulte um profissional de saúde antes de iniciar o uso de qualquer suplemento.",
+  "_aviso_legal": "Rodapé fixo exigido pela política de anúncios de saúde/suplemento da Meta e do Google Ads, e pela regra 4 do CLAUDE.md do Kortexx (aviso de afiliado). Editar o texto, nunca remover.",
+
+  "back_redirects": [
+    { "titulo": "Espera! Separamos um desconto extra pra você", "texto": "Antes de sair, veja esta oferta com um preço ainda melhor.", "texto_botao": "Ver desconto", "href": "/q/outra-oferta-ancora", "auto": false },
+    { "titulo": "Entre no nosso canal VIP de ofertas", "texto": "Ofertas novas todos os dias direto no seu Telegram, sem compromisso.", "texto_botao": "Entrar no canal", "href": "https://t.me/SEU_CANAL_VIP", "auto": false }
+  ],
+  "_back_redirects": "Array ordenado. Ao apertar Voltar no celular: 1ª vez mostra um cartão com o passo [0] (ex.: oferta âncora/desconto); se a página de destino (ex.: /q/outra-oferta-ancora) também tiver back_redirects, o PRÓXIMO Voltar continua a cascata a partir do passo [0] DELA (é assim que chega no Telegram no 2º Voltar do exemplo do Hugo). 'auto': false mostra um cartão com botão (o visitante clica pra ir); 'auto': true navega direto sem clique — evite 'auto':true, pode ser lido como redirecionamento forçado/enganoso pela Meta e pelo Google Ads e arriscar a conta de anúncios.",
+
+  "safe_page": {
+    "ativo": true,
+    "titulo": "Bem-estar no dia a dia: pequenos hábitos que ajudam",
+    "conteudo": "Manter uma rotina de sono regular, se hidratar bem e reservar alguns minutos do dia para descansar são hábitos simples que ajudam no bem-estar geral. Pequenas mudanças de rotina, mantidas com consistência, costumam fazer mais diferença do que grandes mudanças pontuais."
+  },
+  "_safe_page": "Se 'ativo': true e a visita chegar SEM nenhum parâmetro de campanha (utm_source, utm_campaign, utm_content, gclid, fbclid ou src) na URL, o motor mostra esta página editorial neutra em vez do quiz — é a página que um robô revisor do Meta/Google Ads costuma ver. Quem clica no anúncio chega com esses parâmetros e vê o quiz normal."
+}

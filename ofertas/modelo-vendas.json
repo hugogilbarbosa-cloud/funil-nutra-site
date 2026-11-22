@@ -1,0 +1,53 @@
+{
+  "_sobre": "Modelo de oferta do Funil Nutra, layout VENDAS (página de vendas Direct Response: headline + VSL/imagem + benefícios + depoimentos + garantia + FAQ). Copie para <novo-slug>.json e preencha. Campos que começam com _ são só explicação, o motor (app.js) ignora.",
+
+  "tipo_pagina": "vendas",
+
+  "slug": "modelo-vendas",
+  "titulo_pagina": "Modelo Página de Vendas · Kortexx",
+
+  "pixel_id": "000000000000000",
+  "google_tag_id": "",
+
+  "link_afiliado": "https://s.shopee.com.br/COLE_O_LINK_DO_BOTAO_KORTEXX",
+  "_link_afiliado": "Aqui (raiz do JSON), não dentro de tela_diagnostico — advertorial e vendas não têm tela de diagnóstico própria. O sub_id (sub_id1/2/3) é anexado automaticamente a partir da UTM da campanha, igual no layout quiz.",
+
+  "vendas": {
+    "headline": "Descubra o que pode estar pesando na sua rotina — e como apoiar isso hoje",
+    "subheadline": "Veja no vídeo abaixo o que mais procuram quem busca mais disposição no dia a dia.",
+    "video_url": "",
+    "_video_url": "URL embed do VSL (ex.: YouTube/Vimeo no formato /embed/...). Deixe em branco e preencha imagem_principal se não tiver vídeo ainda.",
+    "imagem_principal": "ofertas/assets/modelo-vendas.jpg",
+    "cta_topo": "Quero aproveitar a oferta",
+    "beneficios": [
+      { "titulo": "Benefício 1", "texto": "Benefício genérico de bem-estar/rotina — nunca cura ou tratamento." },
+      { "titulo": "Benefício 2", "texto": "Benefício genérico de bem-estar/rotina." },
+      { "titulo": "Benefício 3", "texto": "Vendido em loja oficial verificada na Shopee/Mercado Livre." }
+    ],
+    "depoimentos": [
+      { "nome": "Cliente verificado", "nota": 5, "texto": "Espaço para depoimento real/verificável (nota ou comentário real do produto na loja) — nunca inventado." }
+    ],
+    "_depoimentos": "Só prova social verificável (nota/comentário real do produto na Shopee/ML) — regra 4 do CLAUDE.md da raiz: nada de depoimento inventado.",
+    "garantia": {
+      "titulo": "Compra protegida",
+      "texto": "Compra feita direto na loja oficial da Shopee/Mercado Livre, com a garantia e política de troca/devolução da própria plataforma."
+    },
+    "faq": [
+      { "pergunta": "Como funciona a entrega?", "resposta": "A entrega segue o prazo e a política da loja oficial (Shopee/Mercado Livre) onde a compra é feita." },
+      { "pergunta": "Preciso de orientação profissional antes de usar?", "resposta": "Sim — consulte um profissional de saúde antes de iniciar o uso de qualquer suplemento, como informado no aviso legal desta página." }
+    ],
+    "cta_final": "Quero aproveitar a oferta"
+  },
+
+  "aviso_legal": "Este conteúdo tem fins informativos sobre bem-estar e não substitui orientação médica ou nutricional profissional. Resultados individuais podem variar. #publi — este site pode conter link de afiliado; podemos receber uma comissão por compras feitas através dele, sem custo extra para você. Consulte um profissional de saúde antes de iniciar o uso de qualquer suplemento.",
+
+  "back_redirects": [
+    { "titulo": "Espera! Separamos um desconto extra pra você", "texto": "Antes de sair, veja esta oferta com um preço ainda melhor.", "texto_botao": "Ver desconto", "href": "/q/outra-oferta-ancora", "auto": false }
+  ],
+
+  "safe_page": {
+    "ativo": true,
+    "titulo": "Bem-estar no dia a dia: pequenos hábitos que ajudam",
+    "conteudo": "Manter uma rotina de sono regular, se hidratar bem e reservar alguns minutos do dia para descansar são hábitos simples que ajudam no bem-estar geral."
+  }
+}

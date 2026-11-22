@@ -1,0 +1,794 @@
+/* Funil Nutra · visual mobile-first simples (tráfego de anúncio é ~90% celular). */
+:root {
+  --kx-fundo: #f4f6f3;
+  --kx-cartao: #ffffff;
+  --kx-texto: #1c2b22;
+  --kx-texto-fraco: #5c6b61;
+  --kx-destaque: #1f7a4d;
+  --kx-destaque-escuro: #155c39;
+  --kx-alerta: #c0392b;
+  --kx-borda: #e1e7e0;
+  --kx-raio: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--kx-fundo);
+  color: var(--kx-texto);
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.kx-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.kx-carregando {
+  margin: auto;
+  color: var(--kx-texto-fraco);
+  font-size: 14px;
+}
+
+.kx-tela {
+  width: 100%;
+  max-width: 480px;
+  background: var(--kx-cartao);
+  border-radius: var(--kx-raio);
+  padding: 24px 20px;
+  margin: 16px auto 0;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+}
+
+.kx-img-produto {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.kx-headline {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+
+.kx-subheadline {
+  font-size: 15px;
+  color: var(--kx-texto-fraco);
+  margin: 0 0 20px;
+  line-height: 1.4;
+}
+
+.kx-pergunta {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+.kx-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kx-opcao {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid var(--kx-borda);
+  background: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.kx-opcao:hover, .kx-opcao:active {
+  border-color: var(--kx-destaque);
+  background: #f0f8f3;
+}
+
+.kx-progresso {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.kx-progresso span {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--kx-borda);
+}
+.kx-progresso span.kx-ativo { background: var(--kx-destaque); }
+
+.kx-diag-titulo {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 14px;
+}
+
+.kx-pontuacao-quiz {
+  margin-bottom: 14px;
+}
+.kx-pontuacao-quiz-barra {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--kx-borda);
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.kx-pontuacao-quiz-fill {
+  height: 100%;
+  background: var(--kx-destaque);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+.kx-pontuacao-quiz-texto {
+  font-size: 12px;
+  color: var(--kx-texto-fraco);
+}
+
+.kx-resultado-perfil {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--kx-destaque);
+  background: #f0f8f3;
+  border-radius: 999px;
+  padding: 5px 12px;
+  margin-bottom: 10px;
+}
+
+.kx-beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.kx-beneficios li {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.kx-beneficios li::before {
+  content: "✅";
+  flex-shrink: 0;
+}
+
+.kx-escassez {
+  background: #fdecea;
+  color: var(--kx-alerta);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.kx-botao-cta {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--kx-destaque);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.kx-botao-cta:active { background: var(--kx-destaque-escuro); }
+
+.kx-aviso-legal {
+  font-size: 11px;
+  color: var(--kx-texto-fraco);
+  line-height: 1.5;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.kx-erro {
+  text-align: center;
+  color: var(--kx-texto-fraco);
+  padding: 40px 16px;
+}
+
+/* Interstitial de back-redirect */
+.kx-interstitial { text-align: center; }
+.kx-interstitial .kx-headline { font-size: 19px; }
+
+/* ---------- Layout "advertorial" (manchete/matéria estilo portal) ---------- */
+.kx-advertorial {
+  max-width: 640px;
+  padding: 28px 22px;
+  text-align: left;
+}
+
+.kx-adv-categoria {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--kx-destaque);
+  margin-bottom: 8px;
+}
+
+.kx-adv-manchete {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+
+.kx-adv-meta {
+  font-size: 13px;
+  color: var(--kx-texto-fraco);
+  margin-bottom: 16px;
+}
+
+.kx-adv-imagem {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.kx-adv-corpo { display: flex; flex-direction: column; gap: 14px; }
+
+.kx-adv-paragrafo {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.kx-adv-subtitulo {
+  font-size: 19px;
+  font-weight: 800;
+  margin: 10px 0 0;
+}
+
+.kx-adv-citacao {
+  margin: 4px 0;
+  padding: 16px 18px;
+  background: #f0f8f3;
+  border-left: 3px solid var(--kx-destaque);
+  border-radius: 0 10px 10px 0;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--kx-texto);
+}
+
+/* ---------- Barra de gancho (1ª coisa visível, acima do cabeçalho do portal) ---------- */
+.kx-gancho-topo {
+  background: var(--kx-destaque-escuro);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 14px;
+  margin: -28px -20px 18px;
+  border-radius: var(--kx-raio) var(--kx-raio) 0 0;
+  line-height: 1.4;
+}
+
+.kx-adv-destaque {
+  background: #f0f8f3;
+  border: 1px solid var(--kx-borda);
+  border-radius: var(--kx-raio);
+  padding: 16px;
+  margin-top: 20px;
+}
+.kx-adv-destaque h3 { margin: 0 0 6px; font-size: 16px; font-weight: 800; }
+.kx-adv-destaque p { margin: 0; font-size: 14px; line-height: 1.5; }
+
+.kx-adv-cta {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* ---------- Layout "vendas" (Direct Response: VSL + benefícios + prova + garantia + FAQ) ---------- */
+.kx-vendas {
+  max-width: 560px;
+  padding: 28px 20px;
+  text-align: center;
+}
+.kx-vendas .kx-botao-cta { margin: 16px 0; }
+
+.kx-vsl {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: var(--kx-raio);
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #000;
+}
+.kx-vsl iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.kx-vendas-imagem {
+  width: 100%;
+  border-radius: var(--kx-raio);
+  margin-bottom: 16px;
+}
+
+.kx-vendas-beneficios {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+  margin: 20px 0;
+}
+.kx-vendas-beneficio {
+  border: 1px solid var(--kx-borda);
+  border-radius: var(--kx-raio);
+  padding: 14px 16px;
+}
+.kx-vendas-beneficio h3 { margin: 0 0 6px; font-size: 16px; font-weight: 800; }
+.kx-vendas-beneficio p { margin: 0; font-size: 14px; color: var(--kx-texto-fraco); line-height: 1.5; }
+
+.kx-vendas-depoimentos {
+  text-align: left;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.kx-depoimento {
+  background: #fafafa;
+  border-radius: var(--kx-raio);
+  padding: 14px 16px;
+}
+.kx-depoimento-nota { color: #e8a33d; font-size: 14px; margin-bottom: 4px; }
+.kx-depoimento p { margin: 0 0 6px; font-size: 14px; line-height: 1.5; }
+.kx-depoimento-nome { font-size: 13px; font-weight: 700; color: var(--kx-texto-fraco); }
+
+.kx-vendas-garantia {
+  background: #f0f8f3;
+  border: 1px solid var(--kx-borda);
+  border-radius: var(--kx-raio);
+  padding: 16px;
+  margin: 20px 0;
+}
+.kx-vendas-garantia h3 { margin: 0 0 6px; font-size: 16px; font-weight: 800; }
+.kx-vendas-garantia p { margin: 0; font-size: 14px; line-height: 1.5; }
+
+.kx-vendas-faq {
+  text-align: left;
+  margin: 20px 0;
+}
+.kx-faq-item {
+  border-bottom: 1px solid var(--kx-borda);
+  padding: 12px 0;
+}
+.kx-faq-item summary {
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.kx-faq-item p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--kx-texto-fraco);
+  line-height: 1.5;
+}
+
+/* ---------- Barra de leitura fixa (advertorial/vendas) ---------- */
+#kx-barra-leitura {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 9999;
+}
+#kx-barra-leitura-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--kx-destaque);
+  transition: width 0.1s linear;
+}
+
+/* ---------- Cabeçalho de portal editorial ---------- */
+.kx-portal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--kx-borda);
+  flex-wrap: wrap;
+}
+.kx-portal-marca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.kx-portal-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--kx-destaque);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.kx-portal-nome {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--kx-texto);
+}
+.kx-portal-categoria {
+  font-weight: 700;
+  color: var(--kx-destaque);
+}
+.kx-portal-leitura {
+  font-size: 12px;
+  color: var(--kx-texto-fraco);
+  background: #f0f8f3;
+  border-radius: 999px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+/* ---------- Hero + legenda fotojornalística ---------- */
+.kx-adv-figura {
+  margin: 0 0 18px;
+}
+.kx-adv-legenda {
+  font-size: 12px;
+  color: var(--kx-texto-fraco);
+  text-align: center;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* ---------- Comparação lado a lado (HTML/CSS puro, sem corte de texto) + tabela ---------- */
+.kx-infografico {
+  margin: 22px 0;
+}
+.kx-comparativo {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+.kx-comparativo-card {
+  flex: 1;
+  min-width: 0;
+  border-radius: 14px;
+  padding: 16px 12px;
+  text-align: center;
+}
+.kx-comparativo-icone {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.kx-comparativo-card h3 {
+  margin: 0 0 6px;
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.kx-comparativo-card p {
+  margin: 0;
+  font-size: 11.5px;
+  color: var(--kx-texto-fraco);
+  line-height: 1.4;
+}
+.kx-comparativo-fraco {
+  background: rgba(154, 163, 156, 0.12);
+  border: 1.5px solid rgba(154, 163, 156, 0.4);
+}
+.kx-comparativo-fraco h3 { color: #6b746d; }
+.kx-comparativo-forte {
+  background: rgba(31, 122, 77, 0.12);
+  border: 1.5px solid rgba(31, 122, 77, 0.4);
+}
+.kx-comparativo-forte h3 { color: var(--kx-destaque); }
+.kx-comparativo-vs {
+  align-self: center;
+  font-size: 13px;
+  color: var(--kx-texto-fraco);
+  flex-shrink: 0;
+}
+.kx-infografico-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 13px;
+}
+.kx-infografico-tabela th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--kx-texto-fraco);
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--kx-borda);
+}
+.kx-infografico-tabela td {
+  padding: 8px;
+  border-bottom: 1px solid var(--kx-borda);
+  line-height: 1.4;
+  vertical-align: middle;
+}
+.kx-infografico-tabela .kx-infografico-icone {
+  text-align: center;
+  width: 64px;
+}
+.kx-infografico-tabela .kx-check { color: var(--kx-destaque); font-size: 15px; }
+.kx-infografico-tabela .kx-x { color: var(--kx-alerta); opacity: 0.7; font-size: 15px; }
+
+/* ---------- Comentários estilo portal (prova social) ---------- */
+.kx-comentarios { margin: 24px 0; text-align: left; }
+.kx-comentarios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.kx-comentario {
+  background: #fafafa;
+  border-radius: var(--kx-raio);
+  padding: 14px 16px;
+}
+.kx-comentario-topo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.kx-comentario-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.kx-comentario-quem {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.kx-comentario-nome {
+  font-size: 13px;
+  font-weight: 700;
+}
+.kx-selo-verificado {
+  font-size: 10.5px;
+  color: var(--kx-destaque);
+  font-weight: 700;
+}
+.kx-comentario p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ---------- Card de oferta final (alto contraste + pulse sutil) ---------- */
+.kx-card-oferta {
+  margin-top: 22px;
+  padding: 20px 18px;
+  border-radius: var(--kx-raio);
+  background: var(--kx-destaque-escuro);
+  color: #fff;
+  text-align: center;
+}
+.kx-card-oferta .kx-beneficios li { color: #fff; }
+.kx-card-oferta-selo {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 5px 12px;
+  margin-bottom: 14px;
+}
+.kx-card-oferta-foto-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 14px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 14px;
+  max-width: 230px;
+}
+.kx-card-oferta-produto {
+  display: block;
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  border-radius: 6px;
+}
+.kx-card-oferta-preco {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.kx-card-oferta-preco-de {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: line-through;
+}
+.kx-card-oferta-preco-por {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffd56b;
+}
+.kx-card-oferta-parcelamento {
+  width: 100%;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+.kx-card-oferta .kx-escassez {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.kx-card-oferta .kx-botao-cta {
+  background: linear-gradient(135deg, #ffd56b, #e8a33d);
+  color: #2b1d03;
+  margin-top: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+.kx-card-oferta .kx-botao-cta:active { background: linear-gradient(135deg, #e8a33d, #d9922e); }
+.kx-micro-seguranca {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 10px 0 0;
+}
+
+@keyframes kx-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.35); }
+  50% { transform: scale(1.025); box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+}
+.kx-botao-cta-pulse { animation: kx-pulse 2.2s ease-in-out infinite; }
+
+/* ---------- Linha do tempo da rotina (hábito amadurecendo, nunca resultado físico prometido) ---------- */
+.kx-linha-tempo {
+  display: flex;
+  gap: 10px;
+  margin: 22px 0;
+}
+.kx-linha-tempo-card {
+  flex: 1;
+  min-width: 0;
+  background: var(--kx-cartao);
+  border: 1px solid var(--kx-borda);
+  border-radius: var(--kx-raio);
+  padding: 14px 10px;
+  text-align: center;
+}
+.kx-linha-tempo-badge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: var(--kx-destaque);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 8px;
+}
+.kx-linha-tempo-card h3 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 800;
+}
+.kx-linha-tempo-card p {
+  margin: 0;
+  font-size: 11.5px;
+  color: var(--kx-texto-fraco);
+  line-height: 1.4;
+}
+
+/* ---------- Sticky bar (mobile e desktop) — só aparece depois de 20% de scroll ---------- */
+#kx-sticky-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--kx-cartao);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.12);
+  padding: 10px 14px;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+}
+#kx-sticky-bar.kx-sticky-visivel { transform: translateY(0); }
+.kx-sticky-foto {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.kx-sticky-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+.kx-sticky-titulo {
+  font-size: 12.5px;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.kx-sticky-nota {
+  font-size: 11px;
+  color: #b5762b;
+}
+.kx-sticky-botao {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ffd56b, #e8a33d);
+  color: #2b1d03;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 10px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.kx-sticky-botao:active { background: #e8a33d; }
+
+@media (min-width: 640px) {
+  #kx-sticky-bar {
+    left: 50%;
+    right: auto;
+    bottom: 16px;
+    transform: translate(-50%, 150%);
+    max-width: 480px;
+    width: calc(100% - 32px);
+    border-radius: var(--kx-raio);
+  }
+  #kx-sticky-bar.kx-sticky-visivel { transform: translate(-50%, 0); }
+}

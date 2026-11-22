@@ -1,0 +1,123 @@
+{
+  "tipo_pagina": "quiz",
+  "slug": "keranat-force",
+  "titulo_pagina": "Keranat Force · Cabelo e Unhas",
+
+  "pixel_id": "",
+  "google_tag_id": "",
+
+  "headline_inicial": "Descubra em 30 segundos qual rotina de cuidado capilar faz mais sentido pra você",
+  "subheadline": "Responda 4 perguntas rápidas e veja a recomendação.",
+
+  "imagem_capa": "https://images.unsplash.com/photo-1759756655330-5c4f7567dc13?fm=jpg&q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0",
+  "_imagem_capa": "Foto temática de estoque (Unsplash License, uso comercial livre, sem marca visível), mostrada só na 1ª pergunta — fotos de hair loss femininas com licença gratuita não achei (as que achei eram Unsplash+ pago ou masculinas); troque se encontrar uma melhor. A foto REAL do produto (imagem_produto, abaixo) é a que aparece no resultado final + sticky bar.",
+
+  "imagem_produto": "ofertas/assets/keranat-force.jpg",
+  "_imagem_produto": "Foto real do Kit 2 Potes, capturada da própria página do produto na Shopee com scripts/funil-nutra/capturar-shopee.mjs (Chrome real via Playwright, só leitura pública — sem login, sem CAPTCHA) e recortada mais de perto (sem a sobra cinza/2º pote cortado que tinha antes).",
+
+  "link_afiliado": "https://s.shopee.com.br/2VtUm4A5Ol",
+  "_link_afiliado": "Link de afiliado real (conta hugogil993). O sub_id é automático (lido da UTM pelo motor).",
+
+  "perguntas": [
+    {
+      "id": "p1",
+      "texto": "Como está sua rotina de cuidado com o cabelo hoje?",
+      "opcoes": [
+        { "texto": "Não tenho rotina nenhuma", "pontos": 4 },
+        { "texto": "Uso só o shampoo do dia a dia", "pontos": 3 },
+        { "texto": "Já uso alguns produtos, sem muita constância", "pontos": 2 },
+        { "texto": "Tenho rotina, mas sinto que falta alguma coisa", "pontos": 1 }
+      ]
+    },
+    {
+      "id": "p2",
+      "texto": "O que você já tentou pra cuidar do cabelo?",
+      "opcoes": [
+        { "texto": "Creme ou máscara de tratamento", "pontos": 2 },
+        { "texto": "Tônico ou ampola", "pontos": 2 },
+        { "texto": "Já tentei várias coisas diferentes", "pontos": 3 },
+        { "texto": "Ainda não tentei nada específico", "pontos": 1 }
+      ]
+    },
+    {
+      "id": "p3",
+      "texto": "Qual seu maior incômodo hoje?",
+      "opcoes": [
+        { "texto": "Fio na escova ou no travesseiro", "pontos": 3 },
+        { "texto": "Cabelo sem viço ou ressecado", "pontos": 2 },
+        { "texto": "Unhas fracas", "pontos": 2 },
+        { "texto": "Sensação de gastar sem ver diferença", "pontos": 3 }
+      ]
+    },
+    {
+      "id": "p4",
+      "texto": "Qual sua meta pros próximos 60 dias?",
+      "opcoes": [
+        { "texto": "Só manter uma rotina simples", "pontos": 1 },
+        { "texto": "Ver uma diferença real na rotina de cuidado", "pontos": 3 },
+        { "texto": "Resolver isso de vez", "pontos": 4 },
+        { "texto": "Testar algo novo com calma", "pontos": 2 }
+      ]
+    }
+  ],
+  "_perguntas": "Pontuação por opção (não é diagnóstico médico): soma dá entre 5 e 14. Decide só QUAL MENSAGEM aparece em oferta.resultado.faixas — as 3 faixas recomendam o MESMO Kit 2 Potes (é o único SKU vendido no link), só muda o tom/ênfase do texto. Nunca virou um 'índice' tipo '84/100': isso simularia uma medição clínica que o quiz não faz de verdade.",
+
+  "resultado": {
+    "faixas": [
+      {
+        "max": 8,
+        "perfil": "PERFIL: ROTINA LEVE",
+        "titulo": "Sua rotina ainda tem espaço pra um reforço simples",
+        "texto": "Mesmo sem um incômodo grande agora, começar uma rotina de dentro pra fora antes que o problema cresça costuma ser mais fácil do que tentar reverter depois. O Kit 2 Potes cobre os 60 dias completos — dá pra testar com calma."
+      },
+      {
+        "max": 11,
+        "perfil": "PERFIL: ROTINA MODERADA",
+        "titulo": "Você já tentou algumas coisas — talvez falte só consistência",
+        "texto": "Quem já tentou creme, máscara ou tônico e não sentiu uma mudança real costuma estar faltando o lado de dentro da rotina, não o de fora. 2 cápsulas por dia, direto, sem aplicar nada no cabelo — e o Kit 2 Potes garante os 60 dias sem interrupção."
+      },
+      {
+        "max": 999,
+        "perfil": "PERFIL: ROTINA INTENSIVA",
+        "titulo": "Pelo que você respondeu, vale priorizar uma rotina completa",
+        "texto": "Fio na escova, gasto sem ver diferença, meta de resolver de vez — esse é o perfil de quem se beneficia mais de uma rotina de 60 dias sem pular nenhum dia. O Kit 2 Potes é pensado exatamente pra isso: nutrição de dentro pra fora, direto nos 2 potes que cobrem o ciclo completo."
+      }
+    ]
+  },
+
+  "comentarios": [],
+  "_comentarios": "Vazio de propósito: tentei 2x extrair avaliações reais da própria Shopee via navegador (scripts/funil-nutra/capturar-shopee.mjs) e nas 2 vezes o site derrubou a sessão/exigiu login depois de poucos segundos de navegação — confirmado de novo nesta rodada, com zero cliques, só rolando a página. Não é falha pontual, é o comportamento real do site. Copie 2-4 avaliações reais olhando a página no SEU navegador (logado) pro formato [{ \"nome\", \"iniciais\", \"nota\", \"texto\", \"verificado\": true }] — nunca inventado (regra 4 do CLAUDE.md da raiz).",
+
+  "card_oferta": {
+    "selo": "Lote Oficial Verificado na Shopee • Nota 5.0",
+    "nota": 5,
+    "nota_fonte": "Shopee Oficial",
+    "preco_de": 179.90,
+    "preco_por": 103.92,
+    "parcelamento_texto": "ou em até 12x no cartão, direto na Shopee",
+    "_preco": "Valores passados pelo Hugo nesta conversa (preço real do Kit 2 Potes na Shopee) — confira de novo antes de ligar tráfego pesado, preço de marketplace muda.",
+    "beneficios": [
+      "Menos de R$ 1,73 por dia (kit 2 potes, rotina de 60 dias)",
+      "Pensado pra rotina de cuidado do cabelo e das unhas",
+      "Loja oficial verificada na Shopee"
+    ],
+    "disponibilidade_texto": "Nota 5.0 com 17 avaliações verificadas • Envio Imediato.",
+    "texto_botao": "VERIFICAR DESCONTO DO KIT 2 POTES NA SHOPEE →",
+    "texto_botao_curto": "Ver oferta",
+    "_texto_botao_curto": "Versão curta só pra sticky bar do rodapé — o CTA longo não cabe ali sem cortar o título ao lado.",
+    "micro_texto_seguranca": "Compra 100% segura, direto na loja oficial da Shopee."
+  },
+
+  "aviso_legal": "Este conteúdo tem fins informativos sobre bem-estar e não substitui orientação médica ou nutricional profissional. Resultados individuais podem variar. #publi — este site pode conter link de afiliado; podemos receber uma comissão por compras feitas através dele, sem custo extra para você. Consulte um profissional de saúde antes de iniciar o uso de qualquer suplemento.",
+
+  "back_redirects": [
+    { "titulo": "Antes de sair, entre no nosso canal VIP", "texto": "Ofertas novas todos os dias direto no seu Telegram, sem compromisso.", "texto_botao": "Entrar no canal", "href": "COLE_O_LINK_DO_SEU_CANAL_VIP_AQUI", "auto": false }
+  ],
+  "_back_redirects": "data/canais.json ainda não tem o campo canal_funil_nutra.telegram preenchido — preencha 1x lá e as próximas ofertas já saem com o link certo automaticamente.",
+
+  "safe_page": {
+    "ativo": true,
+    "titulo": "Cuidados simples pra pele, cabelo e unhas",
+    "conteudo": "Se hidratar bem, usar protetor solar diariamente e manter uma alimentação equilibrada são hábitos simples que ajudam a cuidar da aparência da pele, do cabelo e das unhas com o tempo."
+  }
+}
